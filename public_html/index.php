@@ -22,7 +22,7 @@
   <meta name="msapplication-TileImage" content="/images/apple-touch-icon.png">
   -->
 
-  <title>Lighthouse Insights</title>
+  <title>Lighthouse Insights 1</title>
   <meta name="description" content="">
 
 </head>
