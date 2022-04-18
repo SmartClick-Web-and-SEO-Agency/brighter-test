@@ -1,0 +1,22 @@
+.text-image {
+    padding: 3rem 0;
+    background: url('../images/text-image.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include breakpoint(tablet-up) {
+        padding: 6rem 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+
+        &-item {
+            color: var(--color-light);
+            font-weight: 300;
+            line-height: 1.25;
+        }
+    }
+}

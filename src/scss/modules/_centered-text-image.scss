@@ -1,0 +1,33 @@
+.centered-text-image {
+    padding: 3rem 0 3.2rem;
+    text-align: center;
+    @include strip-pattern();
+
+    @include breakpoint(tablet-up) {
+        padding: 6rem 0 6.2rem;
+    }
+
+    .container {
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(tablet-up) {
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+        max-width: 40rem;
+    }
+
+    &__img {
+        margin-bottom: 1rem;
+    }
+
+}

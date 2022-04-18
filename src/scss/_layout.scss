@@ -1,0 +1,83 @@
+:root {
+  --gutter: clamp(30px, 5vw, 80px);
+}
+
+// Section
+.section {
+  padding-block: var(--gutter);
+}
+
+// Container
+.container {
+  max-width: 1232px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--full {
+  max-width: none;
+}
+
+.container--narrow {
+  max-width: 1080px;
+}
+
+// Columns
+.columns {
+  --gap: 1.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: calc(-1 * var(--gap) / 2);
+
+  > * {
+    margin: calc(var(--gap) / 2);
+    flex-basis: 100%;
+    overflow: hidden;
+  }
+}
+
+.columns--4 > * {
+  @include breakpoint(tablet) {
+    flex-basis: calc(50% - var(--gap));
+  }
+
+  @include breakpoint(desktop) {
+    flex-basis: calc(33.33% - var(--gap));
+
+    &:nth-child(4n):last-child {
+      display: none;
+    }
+  }
+
+  @include breakpoint(desktop-hd) {
+    flex-basis: calc(25% - var(--gap));
+  }
+}
+
+.columns--2 > * {
+  @include breakpoint(desktop-up) {
+    flex-basis: calc(50% - var(--gap));
+  }
+}
+
+// Overlay
+.overlay-container {
+  position: relative;
+}
+
+.overlay,
+.with-overlay::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.with-overlay::before {
+  content: '';
+}

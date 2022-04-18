@@ -1,0 +1,33 @@
+.input {
+  appearance: none;
+  display: block;
+  font: inherit;
+  font-size: .8rem;
+  color: inherit;
+  width: 100%;
+  border: 2px solid var(--color-tiffany);
+  height: 3em;
+  padding: 1em;
+
+  &::placeholder {
+    color: inherit;
+    opacity: .5;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-focus);
+  }
+}
+
+textarea.input {
+  height: auto;
+}
+
+select.input {
+  background-repeat: no-repeat;
+  background-image: url('../images/chevron-down.svg');
+  background-position: right 20px center;
+  background-size: 16px 8px;
+  padding-right: 30px;
+}

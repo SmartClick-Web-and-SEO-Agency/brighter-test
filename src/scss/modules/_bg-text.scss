@@ -1,0 +1,48 @@
+.bg-text {
+    $self: &;
+    padding-top: 56.25%;
+    position: relative;
+    background-image: url('../images/lighthouse.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 40rem;
+    min-height: 15rem;
+
+    &__title {
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 23rem;
+        text-align: center;
+        color: var(--color-light);
+        z-index: 1;
+
+        @include breakpoint(tablet-up) {
+            top: 3.5rem;
+        }
+    }
+
+    &--lighter {
+        background-image: url('../images/lighter.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-height: 30rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 14rem;
+            background: rgb(2,0,36);
+            background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(72,66,129,1) 0%, rgba(72,66,129,0) 100%);
+        }
+
+        #{$self}__title {
+            max-width: 40rem;
+        }
+    }
+}

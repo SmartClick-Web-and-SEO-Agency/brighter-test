@@ -1,0 +1,39 @@
+:root {
+  --font-display: Roboto, Georgia, sans-serif;
+  --font-heading: Roboto, sans-serif;
+  --font-text: Roboto, sans-serif;
+
+  --color-primary: #022453;
+  --color-primary-hover: #01193b;
+  --color-primary-transparent: rgba(2, 36, 83, .8);
+  --color-primary-contrast: #fff;
+
+  --color-secondary: #BA996A;
+  --color-secondary-hover: #8D7047;
+  --color-secondary-disable: #E2C8A3;
+  --color-secondary-contrast: #fff;
+
+  --color-army: #B3B28E;
+  --color-army-hover: #616955;
+  --color-army-disable: #B6BEAB;
+  --color-army-contrast: #fff;
+
+  --color-light: #fff;
+  --color-light-hover: #EBEBEB;
+  --color-light-disable: #FCFCFC;
+  --color-light-contrast: var(--color-primary);
+
+  --color-dark: #000;
+  --color-dark-hover: #23272B;
+  --color-dark-disable: #7A7E83;
+  --color-dark-contrast: #fff;
+
+  --color-grey: #F7F7F7;
+  --color-focus: #e6531a;
+
+  --z-index-header: 100;
+
+  @include breakpoint(mobile) {
+    --typography-size-factor: .7;
+  }
+}

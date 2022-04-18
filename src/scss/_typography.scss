@@ -1,0 +1,149 @@
+.h1,
+.h2 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.h1 {
+  font-size: calc(4.125rem * var(--typography-size-factor, 1));
+}
+
+.h2 {
+  font-size: calc(2.1rem * var(--typography-size-factor, 1));
+}
+
+.h3 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 2.34rem;
+}
+
+.h4 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.h5 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.h6 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin content {
+  overflow-wrap: break-word;
+
+  > * + * {
+    margin-top: 1em;
+  }
+
+  a:not(.btn) {
+    border-bottom: 2px solid var(--color-tiffany);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  p, ul, ol, blockquote, pre {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    @extend .h3;
+  }
+
+  h3 {
+    @extend .h4;
+  }
+
+  h4 {
+    @extend .h5;
+  }
+
+  h5 {
+    @extend .h6;
+  }
+
+  ol {
+    list-style-position: outside;
+    margin-left: 1.5em;
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 1.2em;
+
+    ul {
+      list-style-type: circle;
+
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+
+  li {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+
+  blockquote {
+    font-size: 120%;
+    border-top: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
+    padding: .5em 0;
+  }
+
+  hr {
+    border: 0;
+    border-top: 2px solid var(--color-secondary);
+  }
+
+  figure img {
+    display: block;
+  }
+
+  figcaption {
+    font-size: 90%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-bottom: 1px solid;
+    font-size: 90%;
+  }
+
+  td, th {
+    padding: 15px 0;
+    border-top: 1px solid;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  thead th {
+    border-top: 3px solid;
+  }
+}

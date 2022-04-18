@@ -1,0 +1,33 @@
+.smart-insights {
+    padding: 2rem 0 2.1rem;
+    text-align: center;
+
+    @include breakpoint(tablet-up) {
+        padding: 3rem 0 3.1rem;
+    }
+
+    .container {
+        max-width: 49.5rem;
+    }
+
+    &__title {
+    margin-bottom: 1.5rem;  
+
+        @include breakpoint(tablet-up) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+        font-weight: 300;
+    }
+
+    &__img {
+        margin-bottom: 1rem;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}

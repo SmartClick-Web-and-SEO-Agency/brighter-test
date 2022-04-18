@@ -1,0 +1,5 @@
+@mixin strip-pattern($position : bottom) {
+    background-image: url('../images/strip-pattern.svg');
+    background-repeat: repeat-x;
+    background-position: $position;
+}

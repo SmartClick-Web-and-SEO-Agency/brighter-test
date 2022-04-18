@@ -1,0 +1,38 @@
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--color-light);
+
+  @include breakpoint(tablet-up) {
+    padding: 3rem 0;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+
+    @include breakpoint(tablet-up) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1.75rem;
+
+    @include breakpoint(tablet-up) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &__btns {
+    max-width: 12.5rem;
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(tablet-up) {
+      margin-bottom: 1.1rem;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 1rem;
+  }
+}

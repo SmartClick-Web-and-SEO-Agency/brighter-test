@@ -1,0 +1,32 @@
+.header {
+  padding: 1.2rem 0 1.25rem;
+  @include strip-pattern();
+
+  @include breakpoint(tablet-up) {
+    padding: 1.5rem 0 1.65rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    display: flex;
+  }
+  
+  &__tagline{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: auto;
+    padding-left: 1rem;
+
+    @include breakpoint(tablet-up) {
+      margin-top: auto;
+    }
+  }
+}

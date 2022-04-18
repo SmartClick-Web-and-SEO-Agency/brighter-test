@@ -1,0 +1,14 @@
+.text {
+    padding: 2.25rem 0 2.4rem;
+    @include strip-pattern();
+
+    @include breakpoint(tablet-up) {
+        padding: 3.25rem 0 3.4rem;
+    }
+
+    &__content {
+        font-weight: 300;
+        text-align: center;
+        max-width: 38rem;
+    }
+}

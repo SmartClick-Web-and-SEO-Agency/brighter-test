@@ -1,0 +1,48 @@
+html {
+  background: var(--color-light);
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  color: var(--color-primary);
+  font-family: var(--font-text);
+  line-height: 1.4;
+
+  @include breakpoint(tablet-down) {
+    font-size: 112.5%;
+  }
+
+  @include breakpoint(desktop-up) {
+    font-size: 125%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//* focus =================================================== */
+
+// provide basic, default focus styles
+:focus {
+  outline: 3px solid var(--color-focus);
+}
+
+// remove default focus styles for mouse users ONLY if :focus-visible is supported
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+[tabindex="-1"] {
+  outline: none;
+}
