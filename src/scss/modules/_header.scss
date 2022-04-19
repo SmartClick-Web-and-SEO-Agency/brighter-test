@@ -1,9 +1,11 @@
 .header {
-  padding: 1.2rem 0 1.25rem;
-  @include strip-pattern();
+  padding: 1.2rem 0;
+  background-color: var(--color-light);
+  border-bottom: 0.1rem solid transparent;
+  transition: 0.25s padding ease-in-out;
 
   @include breakpoint(tablet-up) {
-    padding: 1.5rem 0 1.65rem;
+    padding: 1.5rem 0;
   }
 
   &__inner {
@@ -28,5 +30,13 @@
     @include breakpoint(tablet-up) {
       margin-top: auto;
     }
+  }
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    border-bottom-color: var(--color-grey);
+    padding: 0.8rem 0;
+    z-index: 9;
   }
 }

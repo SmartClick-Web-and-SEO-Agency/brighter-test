@@ -1,6 +1,7 @@
 .hero {
   padding: 1.5rem 0 2rem;
   background-color: var(--color-army);
+  @include strip-pattern('top');
 
   &__inner {
     display: flex;

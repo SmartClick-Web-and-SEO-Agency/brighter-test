@@ -43,7 +43,7 @@
   --color-dark-hover: #23272B;
   --color-dark-disable: #7A7E83;
   --color-dark-contrast: #fff;
-  --color-grey: #F7F7F7;
+  --color-grey: #E6E6E6;
   --color-focus: #e6531a;
   --z-index-header: 100;
 }
@@ -438,14 +438,14 @@ select.input {
 }
 
 .header {
-  padding: 1.2rem 0 1.25rem;
-  background-image: url("../images/strip-pattern.svg");
-  background-repeat: repeat-x;
-  background-position: bottom;
+  padding: 1.2rem 0;
+  background-color: var(--color-light);
+  border-bottom: 0.1rem solid transparent;
+  transition: 0.25s padding ease-in-out;
 }
 @media (min-width: 700px) {
   .header {
-    padding: 1.5rem 0 1.65rem;
+    padding: 1.5rem 0;
   }
 }
 .header__inner {
@@ -471,10 +471,21 @@ select.input {
     margin-top: auto;
   }
 }
+.header--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom-color: var(--color-grey);
+  padding: 0.8rem 0;
+  z-index: 9;
+}
 
 .hero {
   padding: 1.5rem 0 2rem;
   background-color: var(--color-army);
+  background-image: url("../images/strip-pattern.svg");
+  background-repeat: repeat-x;
+  background-position: "top";
 }
 .hero__inner {
   display: flex;
